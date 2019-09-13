@@ -1,22 +1,23 @@
---\* Initiating Sound Device*/
-Sound.init()
 System.setCpuSpeed(444)
 
---\*Colors*/
+--\* Initiating Sound Device */
+Sound.init()
+
+--\* Colors */
 white = Color.new(255, 255, 255)
 
---\*Loading Images*/
+--\* Loading Images */
 paddle = Graphics.loadImage("app0:/resources/paddle.png")
 ball = Graphics.loadImage("app0:/resources/ball.png")
 bg = Graphics.loadImage("app0:/resources/wallpaper.png")
 
---\* Loading our audio files */
+--\* Loading audio files */
 beep = Sound.openOgg("app0:/resources/beep.ogg")
 hbeep={hbeep,beep}
 peep = Sound.openOgg("app0:/resources/peep.ogg")
 hpeep={hpeep,hpeep}
 
---\*Defining*/
+--\* Defining */
 p1paddle = 0
 p2paddle = 0
 ballx = 478
@@ -30,7 +31,7 @@ left = 0
 p1score = 0
 p2score = 0
 
---\*Short button names*/
+--\* Short button names */
 cross = SCE_CTRL_CROSS
 square = SCE_CTRL_SQUARE
 circle = SCE_CTRL_CIRCLE
@@ -44,7 +45,7 @@ down = SCE_CTRL_DOWN
 left = SCE_CTRL_LEFT
 right = SCE_CTRL_RIGHT
 
-
+--\* Adding game Function */
 function game()
 
 	ballx = 478
@@ -65,6 +66,7 @@ function game()
 	end
 end
 
+--\* Adding wall collision function to play sound */
 function wallCollision()
 	for s=1,2 do
 		if hbeep[s]==nil then
@@ -75,6 +77,7 @@ function wallCollision()
 	end
 end
 
+--\* Adding score collision function to play sound */
 function scoreCollision()
 	for s=1,2 do
 		if hpeep[s]==nil then
@@ -85,10 +88,11 @@ function scoreCollision()
 	end
 end
 
+-- \* Main Loop */
 while true do
 	pad = Controls.read()
 
-    ballcenterx = ballx + 8
+        ballcenterx = ballx + 8
 	ballcentery = bally + 8
 	balltop = bally
 	ballbottom = bally + 16
@@ -99,14 +103,14 @@ while true do
 	Graphics.initBlend()
 	Screen.clear()
 
-	--\* Display background */
+	--\* Displaying background */
 	Graphics.drawImage(0, 0, bg)
 
-	--\*Displaying other things*/
+	--\* Displaying other things */
 	Graphics.drawImage(ballx, bally, ball)
 	Graphics.drawImage(30, p1paddle, paddle)
 	Graphics.drawImage(900, p2paddle, paddle)
-    Graphics.debugPrint(7, 7, "P1 Score: " ..p1score, white)
+        Graphics.debugPrint(7, 7, "P1 Score: " ..p1score, white)
 	Graphics.debugPrint(810, 7, "P2 Score: " ..p2score, white)
  
 	for i=1,2 do
@@ -122,7 +126,8 @@ while true do
 			hpeep[i]=nil
 		end
 	end
-
+        
+        --\* Ball Collisions with walls */
 	ballx = ballx + dx
 	bally = bally + dy
 	if balltop <= top then
@@ -147,7 +152,7 @@ while true do
 	end
 	
 
-	--\* Control Check */
+	--\* Control Checking for paddle movements */
 	if Controls.check(pad, triangle) then
 		p2paddle = p2paddle - 6
 		if p2paddle <= 0 then
@@ -172,10 +177,8 @@ while true do
 			p1paddle = 482
 		end
 	end
-	if Controls.check(pad, start) then
-		Graphics.freeImage(bg)
-	    System.exit()
-	end
+	
+	--\* Ball Collisions with paddles */
 	if ballleft <= 44 and ballleft >= 42 and ballcentery >= p1paddle and ballcentery <= p1paddle + 62 then
 		dx = dx * -1,9
 		ballx = ballx + 9
@@ -187,17 +190,17 @@ while true do
 		wallCollision()
 	end
 
-	--\*Controls to exit game*/
+	--\* Controls to exit game */
 	if Controls.check(pad, start) then
 		Graphics.freeImage(bg)
 		Sound.close(beep)
 		Sound.close(peep)	
 		Sound.term()
 		Graphics.term()		
-	    System.exit()
+	        System.exit()
 	end
 	
-   --\*Terminating drawing phase*/
+   --\* Terminating drawing phase */
     Screen.flip()
     Graphics.termBlend()
 end
