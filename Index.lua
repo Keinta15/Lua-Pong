@@ -13,7 +13,7 @@ bg = Graphics.loadImage("app0:/resources/wallpaper.png")
 
 --\* Loading audio files */
 beep = Sound.openOgg("app0:/resources/beep.ogg")
-hbeep={hbeep,beep}
+hbeep={hbeep,hbeep}
 peep = Sound.openOgg("app0:/resources/peep.ogg")
 hpeep={hpeep,hpeep}
 
