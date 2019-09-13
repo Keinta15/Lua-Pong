@@ -4,8 +4,7 @@ Lua Pong
 My attempt at a Pong clone for the PS Vita™ made on [Lua Player Plus Vita](https://github.com/Rinnegatamante/lpp-vita).
 This project was done mainly for self learning purposes. You are free to use or distribute the source any way you like.
 
-![Demo](1oxlus.gif)
-![Gif of the Game](https://i.postimg.cc/zGqH5tXf/1oxlus.gif)
+![Demo](demo.gif)
 
 ## Credits
 
