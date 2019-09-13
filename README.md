@@ -6,6 +6,7 @@ This project was done mainly for self learning purposes. You are free to use or 
 
 
 ![Gif of the Game](https://j.gifs.com/ROklvK.gif)
+![Output sample](https://github.com/ajasmin/camstudio-mousedown-highlight/raw/master/android_vid_test.gif)
 
 ## Credits
 
