@@ -6,6 +6,8 @@ This project was done mainly for self learning purposes. You are free to use or 
 
 <iframe src="//gifs.com/embed/ROklvK?muted=false" frameborder="0" scrolling="no" width="720px" height="720px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);"></iframe>
 
+![Gif of the Game](https://j.gifs.com/ROklvK.gif)
+
 ## Credits
 
 - [Rinnegatamante](https://github.com/Rinnegatamante) for [lpp-vita](https://github.com/Rinnegatamante/lpp-vita)
