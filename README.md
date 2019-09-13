@@ -5,7 +5,7 @@ My attempt at a Pong clone for the PS Vita™ made on [Lua Player Plus Vita](htt
 This project was done mainly for self learning purposes. You are free to use or distribute the source any way you like.
 
 
-![Gif of the Game](https://j.gifs.com/ROklvK.gif)
+![Gif of the Game](gifs.com/gif/ROklvK)
 ![Output sample](https://github.com/ajasmin/camstudio-mousedown-highlight/raw/master/android_vid_test.gif)
 
 ## Credits
