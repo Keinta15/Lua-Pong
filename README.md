@@ -6,7 +6,6 @@ This project was done mainly for self learning purposes. You are free to use or 
 
 
 ![Gif of the Game](https://thumbs2.imgbox.com/e7/f5/LxZk7FE5_t.gif)
-[URL=http://imgbox.com/LxZk7FE5][IMG]https://thumbs2.imgbox.com/e7/f5/LxZk7FE5_t.gif[/IMG][/URL]
 
 ## Credits
 
