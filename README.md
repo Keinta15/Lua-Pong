@@ -6,6 +6,10 @@ This project was done mainly for self learning purposes. You are free to use or 
 
 ![Demo](demo.gif)
 
+## To do List:
+* Add CPU player (1 player mode)
+* Add a Menu
+
 ## Credits
 
 - [Rinnegatamante](https://github.com/Rinnegatamante) for [lpp-vita](https://github.com/Rinnegatamante/lpp-vita)
